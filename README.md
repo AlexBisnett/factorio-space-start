@@ -2,7 +2,7 @@
 
 ## Ideas
 - ~~Start with a space platform~~
-- Have some initial items
+- ~~Have some initial items~~
 - ~~No planet surfaces unlocked initially~~
 - Begin in orbit of the star, not in orbit of any planet (new location on starmap)
 - A few technologies to be unlocked at the start: Advanced Asteroid Processing, Coal Synthesis, Simple Coal Liquefaction

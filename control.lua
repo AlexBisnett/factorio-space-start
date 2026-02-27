@@ -24,5 +24,14 @@ script.on_event(defines.events.on_player_created, function(event)
 		player.enter_space_platform(platform)
 
 		player.force.lock_space_location("nauvis")
+
+		hub.insert({ name = "solar-panel", count = 3 })
+		hub.insert({ name = "asteroid-collector", count = 1 })
+		hub.insert({ name = "crusher", count = 1 })
+		hub.insert({ name = "electric-furnace", count = 1 })
+		hub.insert({ name = "assembling-machine-1", count = 1 })
+		hub.insert({ name = "inserter", count = 7 })
+		hub.insert({ name = "transport-belt", count = 20 })
+		hub.insert({ name = "space-platform-foundation", count = 40 })
 	end
 end)
