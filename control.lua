@@ -33,5 +33,6 @@ script.on_event(defines.events.on_player_created, function(event)
 		hub.insert({ name = "inserter", count = 7 })
 		hub.insert({ name = "transport-belt", count = 20 })
 		hub.insert({ name = "space-platform-foundation", count = 40 })
+		hub.insert({ name = "thruster", count = 1 })
 	end
 end)
