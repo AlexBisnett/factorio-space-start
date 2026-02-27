@@ -21,9 +21,7 @@ script.on_event(defines.events.on_player_created, function(event)
 
 	if platform then
 		local hub = platform.apply_starter_pack()
-
-		local safe_position = { x = hub.position.x, y = hub.position.y }
-		player.teleport(safe_position, hub.surface)
+		player.enter_space_platform(platform)
 
 		player.force.lock_space_location("nauvis")
 	end
