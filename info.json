@@ -1,0 +1,12 @@
+{
+    "name": "space-start",
+    "version": "0.0.0",
+    "title": "Space Start",
+    "author": "Aquamarine",
+    "contact": "",
+    "description": "Start in Space",
+    "factorio_version": "2.0",
+    "dependencies": [
+        "space-age"
+    ]
+}

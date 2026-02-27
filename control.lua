@@ -1,0 +1,30 @@
+script.on_init(function()
+	if remote.interfaces["freeplay"] then
+		remote.call("freeplay", "set_created_items", {})
+		remote.call("freeplay", "set_respawn_items", {})
+
+		remote.call("freeplay", "set_skip_intro", true)
+		remote.call("freeplay", "set_disable_crashsite", true)
+	end
+end)
+
+script.on_event(defines.events.on_player_created, function(event)
+	local player = game.get_player(event.player_index)
+
+	player.force.unlock_space_platforms()
+
+	local platform = player.force.create_space_platform({
+		name = "Deucalion",
+		planet = "nauvis",
+		starter_pack = "space-platform-starter-pack",
+	})
+
+	if platform then
+		local hub = platform.apply_starter_pack()
+
+		local safe_position = { x = hub.position.x, y = hub.position.y }
+		player.teleport(safe_position, hub.surface)
+
+		player.force.lock_space_location("nauvis")
+	end
+end)
