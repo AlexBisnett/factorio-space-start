@@ -35,16 +35,42 @@ local advancedMetallicAsteroidCrushingRecipe = utilities.getRecipe("advanced-met
 if advancedMetallicAsteroidCrushingRecipe then
 	advancedMetallicAsteroidCrushingRecipe.enabled = true
 	advancedMetallicAsteroidCrushingRecipe.localised_name = "Metallic Asteroid Crushing"
+
+	local advancedMetallicAsteroidCrushingRecipeResults = advancedMetallicAsteroidCrushingRecipe.results
+	advancedMetallicAsteroidCrushingRecipeResults[#advancedMetallicAsteroidCrushingRecipeResults + 1] =
+		{ type = "item", name = "stone", amount = 5 }
 end
 
 local carbonicAsteroidCrushingRecipe = utilities.getRecipe("carbonic-asteroid-crushing")
 if carbonicAsteroidCrushingRecipe then
 	carbonicAsteroidCrushingRecipe.enabled = true
+
+	local carbonicAsteroidCrushingRecipeResults = carbonicAsteroidCrushingRecipe.results
+	carbonicAsteroidCrushingRecipeResults[#carbonicAsteroidCrushingRecipeResults + 1] =
+		{ type = "item", name = "stone", amount = 5 }
+end
+
+local advancedCarbonicAsteroidCrushingRecipe = utilities.getRecipe("advanced-carbonic-asteroid-crushing")
+if advancedCarbonicAsteroidCrushingRecipe then
+	local advancedCarbonicAsteroidCrushingRecipeResults = advancedCarbonicAsteroidCrushingRecipe.results
+	advancedCarbonicAsteroidCrushingRecipeResults[#advancedCarbonicAsteroidCrushingRecipeResults + 1] =
+		{ type = "item", name = "stone", amount = 5 }
 end
 
 local oxideAsteroidCrushingRecipe = utilities.getRecipe("oxide-asteroid-crushing")
 if oxideAsteroidCrushingRecipe then
 	oxideAsteroidCrushingRecipe.enabled = true
+
+	local oxideAsteroidCrushingRecipeResults = oxideAsteroidCrushingRecipe.results
+	oxideAsteroidCrushingRecipeResults[#oxideAsteroidCrushingRecipeResults + 1] =
+		{ type = "item", name = "stone", amount = 5 }
+end
+
+local advancedOxideAsteroidCrushingRecipe = utilities.getRecipe("advanced-oxide-asteroid-crushing")
+if advancedOxideAsteroidCrushingRecipe then
+	local advancedOxideAsteroidCrushingRecipeResults = advancedOxideAsteroidCrushingRecipe.results
+	advancedOxideAsteroidCrushingRecipeResults[#advancedOxideAsteroidCrushingRecipeResults + 1] =
+		{ type = "item", name = "stone", amount = 5 }
 end
 
 local spacePlatformTechnology = data.raw.technology["space-platform"]
