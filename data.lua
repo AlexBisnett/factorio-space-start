@@ -1,10 +1,7 @@
 local globals = require("globals")
+local utilities = require("utilities")
 
-local function getRecipe(name)
-	local recipe = data.raw.recipe[name]
-	assert(recipe, "Recipe " .. name .. " is missing! Cannot initialize " .. globals.modName .. ".")
-	return recipe
-end
+require("oxy-fuel-furnace/data.lua")
 
 --data.raw.recipe["space-platform-foundation"].enabled = true
 
@@ -29,26 +26,41 @@ ironMetallicAsteroidCrushingRecipe.enabled = true
 copperMetallicAsteroidCrushingRecipe.enabled = true
 ]]
 
-local metallicAsteroidCrushingRecipe = getRecipe("metallic-asteroid-crushing")
+local metallicAsteroidCrushingRecipe = utilities.getRecipe("metallic-asteroid-crushing")
 if metallicAsteroidCrushingRecipe then
 	metallicAsteroidCrushingRecipe.hidden = true
 end
 
-local advancedMetallicAsteroidCrushingRecipe = getRecipe("advanced-metallic-asteroid-crushing")
+local advancedMetallicAsteroidCrushingRecipe = utilities.getRecipe("advanced-metallic-asteroid-crushing")
 if advancedMetallicAsteroidCrushingRecipe then
 	advancedMetallicAsteroidCrushingRecipe.enabled = true
 	advancedMetallicAsteroidCrushingRecipe.localised_name = "Metallic Asteroid Crushing"
 end
 
-local carbonicAsteroidCrushingRecipe = getRecipe("carbonic-asteroid-crushing")
+local carbonicAsteroidCrushingRecipe = utilities.getRecipe("carbonic-asteroid-crushing")
 if carbonicAsteroidCrushingRecipe then
 	carbonicAsteroidCrushingRecipe.enabled = true
 end
 
-local oxideAsteroidCrushingRecipe = getRecipe("oxide-asteroid-crushing")
+local oxideAsteroidCrushingRecipe = utilities.getRecipe("oxide-asteroid-crushing")
 if oxideAsteroidCrushingRecipe then
 	oxideAsteroidCrushingRecipe.enabled = true
 end
 
 local spacePlatformTechnology = data.raw.technology["space-platform"]
 spacePlatformTechnology.prerequisites = nil
+
+local iceMeltingRecipe = utilities.getRecipe("ice-melting")
+if iceMeltingRecipe then
+	iceMeltingRecipe.enabled = true
+end
+
+local thrusterFuelRecipe = utilities.getRecipe("thruster-fuel")
+if thrusterFuelRecipe then
+	thrusterFuelRecipe.enabled = true
+end
+
+local thrusterOxidizerRecipe = utilities.getRecipe("thruster-oxidizer")
+if thrusterOxidizerRecipe then
+	thrusterOxidizerRecipe.enabled = true
+end
